@@ -14,6 +14,10 @@ var app = new Vue ({
                     if(!self.email.includes(risposta.data.response)){
                         self.email.push(risposta.data.response);
                     }
+                    else
+                    {
+                          i--;
+                    }
                 });
             }
         }
