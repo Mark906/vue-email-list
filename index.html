@@ -10,7 +10,8 @@
 
         <div id="root">
             <h1>{{ title }}</h1>
-            <div v-for="contact in email" class="email">
+            <button @click="generateEmail()" type="button" name="button">Generate Email</button>
+            <div v-for="contact in email" class="email" v-if="status">
                 <p >{{ contact }}</p>
             </div>
         </div>
