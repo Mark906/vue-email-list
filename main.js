@@ -3,21 +3,19 @@ var app = new Vue ({
     data: {
         title: "Genera 10 email!",
         email: [],
-        index: 0,
         status: false
     },
     methods: {
         generateEmail(){
             const self = this;
             self.status = true;
-            do{
+            for(let i = 0; i < 10; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(risposta){
                     if(!self.email.includes(risposta.data.response)){
                         self.email.push(risposta.data.response);
                     }
                 });
-                self.index++;
-            } while(self.index < 10)
+            }
         }
     }
 
