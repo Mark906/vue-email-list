@@ -13,10 +13,12 @@
             <div id="wrapper">
                 <h1>{{ title }}</h1>
                 <button @click="generateEmail()" class="generatebutton" type="button" name="button">Generate Email</button>
-                <div v-for="contact in email" class="email" v-if="status">
-                    <p >{{ contact }}</p>
+                <div class="contacts">
+                    <div v-for="contact in email" class="email" v-if="status">
+                        <p >{{ contact }}</p>
+                    </div>
                 </div>
-
+            
             </div>
 
         </div>

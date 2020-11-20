@@ -29,6 +29,12 @@ h1 {
     font-weight: bold;
 }
 
+.contacts {
+    margin-top: 50px;
+    overflow: auto;
+    height: 300px;
+}
+
 .email {
     width: 300px;
     margin: 0 auto;
